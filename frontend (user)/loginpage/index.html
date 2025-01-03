@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+    <title>SANFLICKS</title>
+    <link rel="icon" type="image/x-icon" href="images/e-ticket.png">
+</head>
+<body>
+    <div class="navbar">
+        <h1>
+            SANFL<img src="images/e-ticket.png" style="height:24px">CKS
+            
+        </h1>
+    </div>
+    <div class="query">
+        <div class="signin">
+            <h3>New User?</h3>
+            <button onclick="switchsignin()">Register</button>
+        </div>
+        <div class="login">
+            <h3>Existing User?</h3>
+            <button onclick="switchlogin()">Log in</button>
+        </div>
+    </div>
+    <div class="form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+  
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age" placeholder="Enter your age" required>
+        </div>
+     
+        <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+        </div>
+     
+        <button  onclick="signin()" class="signin-btn">Sign-in</button>
+  
+    </div>
+    <div class="form2">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="login_email" name="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" id="login_password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button onclick="login()" class="login-btn">Log in</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

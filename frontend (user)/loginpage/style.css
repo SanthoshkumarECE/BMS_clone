@@ -1,0 +1,118 @@
+body
+{
+    padding:0px;
+    margin:0px;
+    font-family: "Raleway", sans-serif;
+}
+h1 {
+
+    
+    display: block;
+    width:max-content;
+    margin:0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:30px;
+    color: rgb(255, 94, 0);
+    font-weight: 700;
+
+}
+.navbar
+{
+    background-color: rgba(253, 237, 237, 0.356);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ffbc65;
+}
+.signin-btn,.login-btn
+{
+    border:solid 0.4px;
+    border-radius: 5px;
+    color:orangered;
+    padding:7px 20px 7px 20px;
+    border-color: orangered;
+    font-size: 15px;
+}
+.signin-btn:hover,.login-btn:hover
+{
+    color:white;
+    background-color: orangered;
+}
+
+.signin > h3,.login > h3
+{
+    display:block;
+    width: max-content;
+}
+.query
+{
+    display:flex;
+  
+    border-radius:20px;
+    width:300px;
+    justify-content: space-around;
+    padding:10px;
+    margin:20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(218, 156, 134, 0.363); 
+    box-shadow: rgb(54, 52, 52) 0px 6px 12px -2px, rgba(19, 18, 18, 0.3) 0px 1px 1px -3px;
+}
+
+.form,
+.form2 {
+    display: block;
+    width: max-content;
+    padding: 30px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: rgba(218, 156, 134, 0.363);
+    box-shadow: rgb(54, 52, 52) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 1px 1px -3px;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    
+}
+.form2{
+    display: none;
+}
+
+.login > button,.signin > button{
+    border:solid 0.5px;
+    color:orangered;
+    border-radius: 5px;
+    padding:5px;
+}
+.login>button:hover,
+.signin>button:hover {
+    background-color: orangered;
+    color: white;
+    border:none;
+}

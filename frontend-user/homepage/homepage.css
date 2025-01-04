@@ -1,0 +1,24 @@
+body
+{
+    padding:0px;
+    margin:0px;
+    font-family: "Raleway", sans-serif;
+}
+.navbar > h1 {
+
+    
+    display: block;
+    width:max-content;
+    margin:0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:30px;
+    color: rgb(255, 94, 0);
+    font-weight: 700;
+
+}
+.navbar
+{
+    background-color: rgba(253, 237, 237, 0.356);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

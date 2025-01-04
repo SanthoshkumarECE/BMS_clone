@@ -64,7 +64,7 @@ async function signin() {
     mobilenumber.value = ""
     city.value = ""
     name.value = ""
-    console.log(data)
+    switchlogin();
 }
 
 async function login() {
@@ -93,7 +93,7 @@ async function login() {
             password.value = "";
             localStorage.setItem("Atoken", data.Atoken)
             console.log(data)
-            // window.location.href = "../homepage/homepage.html"
+            window.location.href = "../homepage/homepage.html"
         }
         else {
             return alert(data.message)

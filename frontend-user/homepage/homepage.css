@@ -22,3 +22,42 @@ body
     background-color: rgba(253, 237, 237, 0.356);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.searchtext
+{
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.searchtext:focus {
+    outline: none;
+    border-color: #ffbc65;
+}
+#select
+{
+    padding:5px;
+    outline: none;
+    border-color: #ffbc65;
+    border-radius: 5px;
+}
+.search{
+    padding:5px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    color:white;
+    background-color: orange;
+}
+.search:active
+{
+    background-color: rgb(251, 191, 80);
+}
+.search-container{
+    display: block;
+    width:max-content;
+    margin-top:30px;
+    margin-left: auto;
+    margin-right: auto;
+}

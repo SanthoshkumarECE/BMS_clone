@@ -1,26 +1,26 @@
-body
-{
-    padding:0px;
-    margin:0px;
+body {
+    background-image: url('../images/Ticket_bg.jpg');
+    background-repeat: repeat;
+    padding: 0px;
+    margin: 0px;
     font-family: "Raleway", sans-serif;
 }
-.navbar > h1 {
 
-    
+.navbar {
+    background-color:rgb(240, 112, 66);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-image: none; /* Ensure no background image */
+}
+
+.navbar > h1 {
     display: block;
-    width:max-content;
-    margin:0px;
+    width: max-content;
+    margin: 0px;
     margin-left: auto;
     margin-right: auto;
-    padding:30px;
-    color: rgb(255, 94, 0);
+    padding: 30px;
+    color: white;
     font-weight: 700;
-
-}
-.navbar
-{
-    background-color: rgba(253, 237, 237, 0.356);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .form-group {
@@ -68,7 +68,7 @@ body
 .query
 {
     display:flex;
-  
+    background-color: rgb(255, 228, 179);
     border-radius:20px;
     width:300px;
     justify-content: space-around;
@@ -76,7 +76,7 @@ body
     margin:20px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(218, 156, 134, 0.363); 
+   
     box-shadow: rgb(54, 52, 52) 0px 6px 12px -2px, rgba(19, 18, 18, 0.3) 0px 1px 1px -3px;
 }
 
@@ -89,7 +89,7 @@ body
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    background-color: rgba(218, 156, 134, 0.363);
+    background-color: rgb(255, 228, 179);
     box-shadow: rgb(54, 52, 52) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 1px 1px -3px;
     opacity: 1;
     transition: opacity 0.25s ease;

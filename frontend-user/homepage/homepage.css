@@ -1,63 +1,103 @@
-body
-{
-    padding:0px;
-    margin:0px;
+body {
+    background-image: url('../images/Ticket_bg.jpg');
+    background-repeat: repeat;
+    padding: 0px;
+    margin: 0px;
     font-family: "Raleway", sans-serif;
 }
-.navbar > h1 {
 
-    
+.navbar {
+    background-color:rgb(240, 112, 66);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-image: none; /* Ensure no background image */
+}
+
+.navbar > h1 {
     display: block;
-    width:max-content;
-    margin:0px;
+    width: max-content;
+    margin: 0px;
     margin-left: auto;
     margin-right: auto;
-    padding:30px;
-    color: rgb(255, 94, 0);
+    padding: 30px;
+    color: white;
     font-weight: 700;
-
-}
-.navbar
-{
-    background-color: rgba(253, 237, 237, 0.356);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.searchtext
-{
+.search-container {
+    display: block;
+    width: max-content;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white; /* Set a solid background color */
+    background-image: none; /* Ensure no background image */
+    padding: 10px; /* Add padding for better spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; /* Optional: Add a subtle shadow */
+}
+
+.searchtext {
     width: 200px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
 }
+
 .searchtext:focus {
     outline: none;
     border-color: #ffbc65;
 }
-#select
-{
-    padding:5px;
+
+#select {
+    padding: 5px;
     outline: none;
     border-color: #ffbc65;
     border-radius: 5px;
 }
-.search{
-    padding:5px;
+
+.search {
+    padding: 5px;
     outline: none;
-    border:none;
+    border: none;
     border-radius: 5px;
-    color:white;
+    color: white;
     background-color: orange;
 }
-.search:active
-{
+
+.search:active {
     background-color: rgb(251, 191, 80);
 }
-.search-container{
-    display: block;
-    width:max-content;
-    margin-top:30px;
+
+.movies-container {
+    max-width: 50%;
+    border: 1.5px solid #ccc;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: white; /* Set a solid background color */
+    background-image: none; /* Ensure no background image */
+}
+
+.movie-card {
+    width: 80%;
+    padding: 20px;
+    margin: 20px;
+    border: 1.5px solid #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white; /* Set a solid background color */
+    background-image: none; /* Ensure no background image */
+}
+
+.book {
+    color: white;
+    background-color: orangered;
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    border-radius: 3px;
 }

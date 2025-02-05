@@ -24,7 +24,7 @@ const getMoviesByLocation = async (req, res) => {
         const movies = await Movie.find()
             .populate({
                 path: 'theaterId',
-                match: { city: city },
+                match: { city: { $regex: city, $options: 'i' } },
                 select: 'theatername city',
             })
             .exec();
@@ -43,7 +43,7 @@ const getMoviesByName = async (req, res) => {
         if (!title) {
             return res.status(400).json({ message: 'title is required in query parameters' });
         }
-        const movies = await Movie.find({ title })
+        const movies = await Movie.find({ title: { $regex: title, $options: 'i' } })
             .populate({
                 path: 'theaterId',
                 select: 'theatername city'
@@ -67,7 +67,7 @@ const getMoviesByTheaterName = async (req, res) => {
         const movies = await Movie.find()
             .populate({
                 path: 'theaterId',
-                match: { theatername: theatername },
+                match: { theatername: { $regex: theatername, $options: 'i' } },
                 select: 'theatername city'
             })
             .exec();

@@ -57,6 +57,37 @@ const getMoviesByName = async (req, res) => {
     }
 };
 
+const getMovieDetails = async (req, res) => {
+    try {
+        const id = req.params.id;
+
+        // Validate if id is provided
+        if (!id) {
+            return res.status(400).json({ message: 'Movie ID is required in URL parameters' });
+        }
+
+        // Fetch movie details with theater details populated
+        const movie = await Movie.findById(id)
+            .populate({
+                path: 'theaterId',
+                select: 'theatername city'
+            })
+            .exec();
+
+        // Check if movie exists
+        if (!movie) {
+            return res.status(404).json({ message: 'Movie not found' });
+        }
+
+        console.log(movie);
+        res.status(200).json(movie);
+    } catch (error) {
+        console.error("Error fetching movie:", error);
+        res.status(500).json({ message: 'Error fetching movie', error: error.message });
+    }
+};
+
+
 const getMoviesByTheaterName = async (req, res) => {
     try {
         const { theatername } = req.query;
@@ -297,6 +328,7 @@ const addfeedback = async (req, res) => {
 module.exports = {
     getUserHomepage, getMoviesByLocation, getMoviesByName,
     getMoviesByTheaterName, getProfile, bookSeats,
-    getbookinghistory, updateProfile, cancelBooking,addfeedback
+    getbookinghistory, updateProfile, cancelBooking,addfeedback,
+    getMovieDetails
     
 }

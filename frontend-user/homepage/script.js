@@ -50,11 +50,12 @@ function createMovieCards(movies) {
 
       movieCard.innerHTML = `
         <h3>Movie name: ${movie.title}</h3>
+        <hr>
         <p>Duration: ${movie.duration}</p>
         <p>Description: ${movie.description}</p>
         <p style="font-size:10px;">Theater: ${movie.theaterId.theatername}</p>
         <p style="font-size:10px;">City: ${movie.theaterId.city}</p>
-        <button class="book">Book</button>
+        <button onclick="Bookticketpage(event)"class="book">Book</button>
       `;
 
       // Append the card to the container
@@ -69,7 +70,19 @@ function createMovieCards(movies) {
   }
 }
 
-// Call GetMovie when the page loads (for testing purposes)
-// Remove this line if you're calling GetMovie from another function (e.g., after login)
+
 GetMovie();
 
+function Bookticketpage(event) {
+  // Find the closest movie card to the clicked button
+  const movieCard = event.target.closest('.movie-card');
+  
+  // Get movie ID and theater ID
+  const movieId = movieCard.getAttribute('data-movie-id');
+  const theaterId = movieCard.getAttribute('data-theater-id');
+
+  // Redirect to seats.html with movieId and theaterId as URL parameters
+  console.log(movieId)
+  console.log(theaterId)
+  window.location.href = `../seat_selection/seats.html?movieId=${movieId}&theaterId=${theaterId}`;
+}

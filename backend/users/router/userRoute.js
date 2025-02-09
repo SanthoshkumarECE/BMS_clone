@@ -13,6 +13,7 @@ router.get("/homepage", bookingcontroller.getUserHomepage)
 router.get("/location", bookingcontroller.getMoviesByLocation)
 router.get("/moviename", bookingcontroller.getMoviesByName)
 router.get("/theatername", bookingcontroller.getMoviesByTheaterName)
+router.get("/moviedetails/:id",bookingcontroller.getMovieDetails)
 
 router.get("/profile", Auth, bookingcontroller.getProfile)
 router.get("/booking",Auth,bookingcontroller.getbookinghistory)
@@ -22,5 +23,7 @@ router.put("/updateprofile",Auth,bookingcontroller.updateProfile)
 
 router.delete("/cancelbooking", Auth, bookingcontroller.cancelBooking)
 router.post("/addfeedback",Auth,bookingcontroller.addfeedback)
+
+
 
 module.exports = router

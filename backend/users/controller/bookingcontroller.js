@@ -29,7 +29,7 @@ const getMoviesByLocation = async (req, res) => {
             })
             .exec();
         const filteredMovies = movies.filter(movie => movie.theaterId !== null);
-        console.log(filteredMovies)
+        // console.log(filteredMovies)
         res.status(200).json(filteredMovies);
     } catch (error) {
         res.status(500).json({ message: 'Error fetching movies', error: error.message });
@@ -50,7 +50,7 @@ const getMoviesByName = async (req, res) => {
             })
             .exec();
 
-        console.log(movies)
+        // console.log(movies)
         res.status(200).json(movies);
     } catch (error) {
         res.status(500).json({ message: 'Error fetching movies', error: error.message });
@@ -79,7 +79,7 @@ const getMovieDetails = async (req, res) => {
             return res.status(404).json({ message: 'Movie not found' });
         }
 
-        console.log(movie);
+        // console.log(movie);
         res.status(200).json(movie);
     } catch (error) {
         console.error("Error fetching movie:", error);
@@ -103,7 +103,7 @@ const getMoviesByTheaterName = async (req, res) => {
             })
             .exec();
         const filteredMovies = movies.filter(movie => movie.theaterId !== null);
-        console.log(filteredMovies)
+        // console.log(filteredMovies)
         res.status(200).json(filteredMovies);
     } catch (error) {
         res.status(500).json({ message: 'Error fetching movies', error: error.message });
@@ -140,6 +140,7 @@ const getProfile = async (req, res) => {
 };
 
 const bookSeats = async (req, res) => {
+    console.log("body : ",req.body)
     const { movieId, theaterId, bookedSeats } = req.body;
     const userId = req.user.userid;
 

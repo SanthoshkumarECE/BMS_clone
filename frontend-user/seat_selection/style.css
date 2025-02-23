@@ -43,9 +43,13 @@ body {
     border-radius: 5px;
     
 }
-
+.selected
+{
+    background-color: rgb(30, 194, 30);
+    color: white;
+}
 .seat:not(.booked):hover {
-    background-color: #90ee90;
+    background-color: #a8edbb;
 }
 
 .booked {
@@ -87,4 +91,37 @@ body {
 #screendiv
 {
     margin: 50px;
+}
+
+.seatbook-container
+{
+    border: solid rgb(159, 155, 155);
+    display: block;
+    border-width: 1.5px;
+    border-radius: 10px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top:20px;
+    padding:15px;
+}
+.count
+{
+    border: solid rgb(159, 155, 155);
+    display: inline-block;
+    margin:0px;
+    border-width: 1.5px;
+    border-radius: 4px;
+    padding:2px
+}
+.bookbutton
+{
+    border:none;
+    background-color: orange;
+    border-radius: 4px;
+    padding:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
 }
